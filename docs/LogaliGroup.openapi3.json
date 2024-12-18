@@ -1,13 +1,13 @@
 {
   "openapi": "3.0.2",
   "info": {
-    "title": "Use @title: '...' on your CDS service to provide a meaningful title.",
-    "description": "Use @Core.LongDescription: '...' on your CDS service to provide a meaningful description.",
+    "title": "SAP Build Process Automation",
+    "description": "SAP Build Process Automation with Cloud Application Programming Model",
     "version": ""
   },
   "x-sap-api-type": "ODATAV4",
   "x-odata-version": "4.01",
-  "x-sap-shortText": "Use @Core.Description: '...' on your CDS service to provide a meaningful short text.",
+  "x-sap-shortText": "BAP with CAP",
   "servers": [
     {
       "url": "/rest/logali-group"
@@ -672,7 +672,7 @@
         }
       }
     },
-    "/getSupplier": {
+    "/getSupplier(ID='{ID}')": {
       "get": {
         "summary": "Invokes function getSupplier",
         "tags": [
@@ -681,13 +681,12 @@
         "parameters": [
           {
             "required": true,
-            "in": "query",
+            "in": "path",
             "name": "ID",
             "description": "String value needs to be enclosed in single quotes",
             "schema": {
               "type": "string",
-              "maxLength": 10,
-              "pattern": "^'([^']|'')*'$"
+              "maxLength": 10
             }
           }
         ],
