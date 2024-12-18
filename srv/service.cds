@@ -24,7 +24,7 @@ service LogaliGroup {
         Supplier            : SuppliersSet:Supplier;
         SupplierName        : SuppliersSet:SupplierName;
         SupplierFullName    : SuppliersSet:SupplierFullName;
-        toCompany           : {
+        toCompany           : many {
             CompanyCode     : CompaniesSet:Code;
             CompanyCodeName : CompaniesSet:Name
         }
