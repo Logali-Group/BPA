@@ -20,12 +20,10 @@ module.exports = class LogaliGroup extends cds.ApplicationService {
 
             return await api.tx(req).send({
                 query:
-                SELECT.from(SuppliersSet, supplier => {
+                SELECT.one.from(SuppliersSet, supplier => {
                     supplier.Supplier,
                     supplier.SupplierName,
                     supplier.SupplierFullName,
-                    // supplier('toCompany').Company,
-                    // supplier('toCompany').CompanyCodeName
                     supplier.toCompany(company => {
                         company('CompanyCode'),
                         company('CompanyCodeName')

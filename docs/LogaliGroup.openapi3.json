@@ -778,12 +778,15 @@
             "nullable": true
           },
           "toCompany": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/LogaliGroup.MySupplier_toCompany"
-              }
-            ],
-            "nullable": true
+            "type": "array",
+            "items": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/LogaliGroup.MySupplier_toCompany"
+                }
+              ],
+              "nullable": true
+            }
           }
         }
       },
