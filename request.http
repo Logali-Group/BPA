@@ -1,2 +1,14 @@
-#GET
+###GET - Entities
+http://localhost:4004/odata/v4/logali-group/
+
+###GET - Supplier
+http://localhost:4004/odata/v4/logali-group/SuppliersSet
+
+###GET - Companies
+http://localhost:4004/odata/v4/logali-group/CompaniesSet
+
+###GET - Supplier and Companies
+http://localhost:4004/odata/v4/logali-group/SuppliersSet?$expand=toCompany
+
+###GET - Function - getSupplier
 http://localhost:4004/odata/v4/logali-group/getSupplier(ID='1018')
