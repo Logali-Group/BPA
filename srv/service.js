@@ -24,6 +24,8 @@ module.exports = class LogaliGroup extends cds.ApplicationService {
                     supplier.Supplier,
                     supplier.SupplierName,
                     supplier.SupplierFullName,
+                    // supplier('toCompany').Company,
+                    // supplier('toCompany').CompanyCodeName
                     supplier.toCompany(company => {
                         company('CompanyCode'),
                         company('CompanyCodeName')
